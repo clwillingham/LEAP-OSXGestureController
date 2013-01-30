@@ -13,42 +13,42 @@
 		1394A21416B72AD000192439 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1394A21216B72AD000192439 /* Credits.rtf */; };
 		1394A21716B72AD000192439 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A21616B72AD000192439 /* AppDelegate.m */; };
 		1394A21A16B72AD000192439 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1394A21816B72AD000192439 /* MainMenu.xib */; };
-		1394A22216B72AD000192439 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A22116B72AD000192439 /* SenTestingKit.framework */; };
-		1394A22316B72AD000192439 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A20316B72AD000192439 /* Cocoa.framework */; };
-		1394A22B16B72AD000192439 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1394A22916B72AD000192439 /* InfoPlist.strings */; };
-		1394A22E16B72AD000192439 /* LEAPTest3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A22D16B72AD000192439 /* LEAPTest3Tests.m */; };
+		1394A25516B732F800192439 /* GestureListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A23816B72AE300192439 /* GestureListener.m */; };
+		1394A26416B84EA600192439 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26216B84EA600192439 /* LeapObjectiveC.mm */; };
+		1394A26716B8577F00192439 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26616B8577F00192439 /* Gesture.m */; };
+		1394A26916B85FB700192439 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A26816B85FB700192439 /* libLeap.dylib */; };
+		13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1394A22416B72AD000192439 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1394A1F616B72AD000192439 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1394A1FE16B72AD000192439;
-			remoteInfo = LEAPTest3;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1394A1FF16B72AD000192439 /* LEAPTest3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEAPTest3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394A1FF16B72AD000192439 /* MacGestureControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacGestureControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1394A20316B72AD000192439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1394A20616B72AD000192439 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1394A20716B72AD000192439 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1394A20816B72AD000192439 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1394A20B16B72AD000192439 /* LEAPTest3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LEAPTest3-Info.plist"; sourceTree = "<group>"; };
+		1394A20B16B72AD000192439 /* MacGestureControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacGestureControl-Info.plist"; sourceTree = "<group>"; };
 		1394A20D16B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1394A20F16B72AD000192439 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1394A21116B72AD000192439 /* LEAPTest3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LEAPTest3-Prefix.pch"; sourceTree = "<group>"; };
+		1394A21116B72AD000192439 /* MacGestureControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacGestureControl-Prefix.pch"; sourceTree = "<group>"; };
 		1394A21316B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		1394A21516B72AD000192439 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1394A21616B72AD000192439 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1394A21916B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1394A22016B72AD000192439 /* LEAPTest3Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEAPTest3Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1394A22116B72AD000192439 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1394A22816B72AD000192439 /* LEAPTest3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LEAPTest3Tests-Info.plist"; sourceTree = "<group>"; };
 		1394A22A16B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1394A22C16B72AD000192439 /* LEAPTest3Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEAPTest3Tests.h; sourceTree = "<group>"; };
 		1394A22D16B72AD000192439 /* LEAPTest3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEAPTest3Tests.m; sourceTree = "<group>"; };
+		1394A23716B72AE300192439 /* GestureListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureListener.h; sourceTree = "<group>"; };
+		1394A23816B72AE300192439 /* GestureListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureListener.m; sourceTree = "<group>"; };
+		1394A25E16B84EA600192439 /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leap.h; sourceTree = "<group>"; };
+		1394A26016B84EA600192439 /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
+		1394A26116B84EA600192439 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapObjectiveC.h; sourceTree = "<group>"; };
+		1394A26216B84EA600192439 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
+		1394A26516B8577F00192439 /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
+		1394A26616B8577F00192439 /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
+		1394A26816B85FB700192439 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		13F4E47416B9B99D008A816C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,16 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */,
 				1394A20416B72AD000192439 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1394A21C16B72AD000192439 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1394A22216B72AD000192439 /* SenTestingKit.framework in Frameworks */,
-				1394A22316B72AD000192439 /* Cocoa.framework in Frameworks */,
+				1394A26916B85FB700192439 /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +68,8 @@
 		1394A1F416B72AD000192439 = {
 			isa = PBXGroup;
 			children = (
-				1394A20916B72AD000192439 /* LEAPTest3 */,
+				13F4E47416B9B99D008A816C /* EventKit.framework */,
+				1394A20916B72AD000192439 /* MacGestureControl */,
 				1394A22616B72AD000192439 /* LEAPTest3Tests */,
 				1394A20216B72AD000192439 /* Frameworks */,
 				1394A20016B72AD000192439 /* Products */,
@@ -85,8 +79,7 @@
 		1394A20016B72AD000192439 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1394A1FF16B72AD000192439 /* LEAPTest3.app */,
-				1394A22016B72AD000192439 /* LEAPTest3Tests.octest */,
+				1394A1FF16B72AD000192439 /* MacGestureControl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +87,7 @@
 		1394A20216B72AD000192439 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1394A26816B85FB700192439 /* libLeap.dylib */,
 				1394A20316B72AD000192439 /* Cocoa.framework */,
 				1394A22116B72AD000192439 /* SenTestingKit.framework */,
 				1394A20516B72AD000192439 /* Other Frameworks */,
@@ -111,24 +105,30 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		1394A20916B72AD000192439 /* LEAPTest3 */ = {
+		1394A20916B72AD000192439 /* MacGestureControl */ = {
 			isa = PBXGroup;
 			children = (
+				1394A20A16B72AD000192439 /* Supporting Files */,
+				1394A25D16B84EA600192439 /* include */,
 				1394A21516B72AD000192439 /* AppDelegate.h */,
 				1394A21616B72AD000192439 /* AppDelegate.m */,
 				1394A21816B72AD000192439 /* MainMenu.xib */,
-				1394A20A16B72AD000192439 /* Supporting Files */,
+				1394A26516B8577F00192439 /* Gesture.h */,
+				1394A26616B8577F00192439 /* Gesture.m */,
+				1394A23716B72AE300192439 /* GestureListener.h */,
+				1394A23816B72AE300192439 /* GestureListener.m */,
 			);
+			name = MacGestureControl;
 			path = LEAPTest3;
 			sourceTree = "<group>";
 		};
 		1394A20A16B72AD000192439 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1394A20B16B72AD000192439 /* LEAPTest3-Info.plist */,
+				1394A20B16B72AD000192439 /* MacGestureControl-Info.plist */,
 				1394A20C16B72AD000192439 /* InfoPlist.strings */,
 				1394A20F16B72AD000192439 /* main.m */,
-				1394A21116B72AD000192439 /* LEAPTest3-Prefix.pch */,
+				1394A21116B72AD000192439 /* MacGestureControl-Prefix.pch */,
 				1394A21216B72AD000192439 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -153,12 +153,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1394A25D16B84EA600192439 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1394A25E16B84EA600192439 /* Leap.h */,
+				1394A26016B84EA600192439 /* LeapMath.h */,
+				1394A26116B84EA600192439 /* LeapObjectiveC.h */,
+				1394A26216B84EA600192439 /* LeapObjectiveC.mm */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1394A1FE16B72AD000192439 /* LEAPTest3 */ = {
+		1394A1FE16B72AD000192439 /* MacGestureControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "LEAPTest3" */;
+			buildConfigurationList = 1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "MacGestureControl" */;
 			buildPhases = (
 				1394A1FB16B72AD000192439 /* Sources */,
 				1394A1FC16B72AD000192439 /* Frameworks */,
@@ -168,29 +179,10 @@
 			);
 			dependencies = (
 			);
-			name = LEAPTest3;
+			name = MacGestureControl;
 			productName = LEAPTest3;
-			productReference = 1394A1FF16B72AD000192439 /* LEAPTest3.app */;
+			productReference = 1394A1FF16B72AD000192439 /* MacGestureControl.app */;
 			productType = "com.apple.product-type.application";
-		};
-		1394A21F16B72AD000192439 /* LEAPTest3Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1394A23416B72AD000192439 /* Build configuration list for PBXNativeTarget "LEAPTest3Tests" */;
-			buildPhases = (
-				1394A21B16B72AD000192439 /* Sources */,
-				1394A21C16B72AD000192439 /* Frameworks */,
-				1394A21D16B72AD000192439 /* Resources */,
-				1394A21E16B72AD000192439 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1394A22516B72AD000192439 /* PBXTargetDependency */,
-			);
-			name = LEAPTest3Tests;
-			productName = LEAPTest3Tests;
-			productReference = 1394A22016B72AD000192439 /* LEAPTest3Tests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,7 +193,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Chris Willingham";
 			};
-			buildConfigurationList = 1394A1F916B72AD000192439 /* Build configuration list for PBXProject "LEAPTest3" */;
+			buildConfigurationList = 1394A1F916B72AD000192439 /* Build configuration list for PBXProject "MacGestureControl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,8 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1394A1FE16B72AD000192439 /* LEAPTest3 */,
-				1394A21F16B72AD000192439 /* LEAPTest3Tests */,
+				1394A1FE16B72AD000192439 /* MacGestureControl */,
 			);
 		};
 /* End PBXProject section */
@@ -230,59 +221,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1394A21D16B72AD000192439 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1394A22B16B72AD000192439 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1394A21E16B72AD000192439 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1394A1FB16B72AD000192439 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1394A25516B732F800192439 /* GestureListener.m in Sources */,
 				1394A21016B72AD000192439 /* main.m in Sources */,
 				1394A21716B72AD000192439 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1394A21B16B72AD000192439 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1394A22E16B72AD000192439 /* LEAPTest3Tests.m in Sources */,
+				1394A26416B84EA600192439 /* LeapObjectiveC.mm in Sources */,
+				1394A26716B8577F00192439 /* Gesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1394A22516B72AD000192439 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1394A1FE16B72AD000192439 /* LEAPTest3 */;
-			targetProxy = 1394A22416B72AD000192439 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1394A20C16B72AD000192439 /* InfoPlist.strings */ = {
@@ -376,11 +330,20 @@
 		1394A23216B72AD000192439 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/LEAPTest3-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3/LEAPTest3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "LEAPTest3/MacGestureControl-Prefix.pch";
+				INFOPLIST_FILE = "LEAPTest3/MacGestureControl-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = MacGestureControl;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,49 +351,28 @@
 		1394A23316B72AD000192439 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/LEAPTest3-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3/LEAPTest3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "LEAPTest3/MacGestureControl-Prefix.pch";
+				INFOPLIST_FILE = "LEAPTest3/MacGestureControl-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = MacGestureControl;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		1394A23516B72AD000192439 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LEAPTest3.app/Contents/MacOS/LEAPTest3";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/LEAPTest3-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3Tests/LEAPTest3Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		1394A23616B72AD000192439 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LEAPTest3.app/Contents/MacOS/LEAPTest3";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/LEAPTest3-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3Tests/LEAPTest3Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1394A1F916B72AD000192439 /* Build configuration list for PBXProject "LEAPTest3" */ = {
+		1394A1F916B72AD000192439 /* Build configuration list for PBXProject "MacGestureControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1394A22F16B72AD000192439 /* Debug */,
@@ -439,21 +381,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "LEAPTest3" */ = {
+		1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "MacGestureControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1394A23216B72AD000192439 /* Debug */,
 				1394A23316B72AD000192439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1394A23416B72AD000192439 /* Build configuration list for PBXNativeTarget "LEAPTest3Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1394A23516B72AD000192439 /* Debug */,
-				1394A23616B72AD000192439 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
