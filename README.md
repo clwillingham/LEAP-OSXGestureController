@@ -14,10 +14,10 @@ How?
 -----
 After you have opened the application in xcode and started the app (there might be some referance errors, if there are, drag libLeap.dylib from the Leap SDK into Frameworks) you may use the following gestures:
 
-*swipe up: open mission control
-*swipe down: open expose
-*swipe left: switch to space left of current space
-*swipe right: switch to space right of current space
+* swipe up: open mission control
+* swipe down: open expose
+* swipe left: switch to space left of current space
+* swipe right: switch to space right of current space
 
 Also...
 -------
