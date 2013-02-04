@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1394A1FE16B72AD000192439"
-               BuildableName = "LEAPTest3.app"
-               BlueprintName = "MacGestureControl"
-               ReferencedContainer = "container:MacGestureControl.xcodeproj">
+               BuildableName = "OSXGestureControl.app"
+               BlueprintName = "OSXGestureControl"
+               ReferencedContainer = "container:OSXGestureControl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "1394A21F16B72AD000192439"
                BuildableName = "LEAPTest3Tests.octest"
                BlueprintName = "LEAPTest3Tests"
-               ReferencedContainer = "container:MacGestureControl.xcodeproj">
+               ReferencedContainer = "container:OSXGestureControl.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1394A1FE16B72AD000192439"
-            BuildableName = "LEAPTest3.app"
-            BlueprintName = "MacGestureControl"
-            ReferencedContainer = "container:MacGestureControl.xcodeproj">
+            BuildableName = "OSXGestureControl.app"
+            BlueprintName = "OSXGestureControl"
+            ReferencedContainer = "container:OSXGestureControl.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1394A1FE16B72AD000192439"
-            BuildableName = "LEAPTest3.app"
-            BlueprintName = "MacGestureControl"
-            ReferencedContainer = "container:MacGestureControl.xcodeproj">
+            BuildableName = "OSXGestureControl.app"
+            BlueprintName = "OSXGestureControl"
+            ReferencedContainer = "container:OSXGestureControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -88,9 +88,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1394A1FE16B72AD000192439"
-            BuildableName = "LEAPTest3.app"
-            BlueprintName = "MacGestureControl"
-            ReferencedContainer = "container:MacGestureControl.xcodeproj">
+            BuildableName = "OSXGestureControl.app"
+            BlueprintName = "OSXGestureControl"
+            ReferencedContainer = "container:OSXGestureControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

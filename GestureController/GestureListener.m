@@ -68,11 +68,11 @@
             //NSLog(@"Hand has %ld fingers, average finger tip position %@",
             //      [fingers count], avgVelocity);
             if([avgPos z] < 0){
-                if([avgVelocity y] > 1000){
+                if([avgVelocity y] > 700){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Up andFingers:[fingers count]];
                     //NSLog(@"Gesture up with %ld fingers", [fingers count]);
                     [self gestureDetected:gesture];
-                }else if([avgVelocity y] < -1500){
+                }else if([avgVelocity y] < -700){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Down andFingers:[fingers count]];
                     //NSLog(@"Gesture down with %ld fingers", [fingers count]);
                     [self gestureDetected:gesture];
@@ -98,7 +98,7 @@
 
 -(void) gestureDetected:(Gesture *)gesture{
     if ((prevGesture == nil || [prevGesture direction] != [gesture direction]) && onGesture != nil) {
-        gestureTimeout = 800;
+        gestureTimeout = 200;
         prevGesture = gesture;
         onGesture(gesture);
     }

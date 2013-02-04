@@ -10,12 +10,14 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     NSWindow *window;
-    IBOutlet NSMenu *statusMenu;
     NSStatusItem * statusItem;
 }
+@property (weak) IBOutlet NSMenu *statusMenu;
 
 @property (assign) IBOutlet NSWindow *window;
 -(void) pressKey:(int)key down:(BOOL)pressDown;
+- (IBAction)onQuitClick:(id)sender;
+- (IBAction)onAboutClick:(id)sender;
 
 
 @end

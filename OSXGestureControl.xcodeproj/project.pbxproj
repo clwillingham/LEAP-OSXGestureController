@@ -18,37 +18,35 @@
 		1394A26716B8577F00192439 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26616B8577F00192439 /* Gesture.m */; };
 		1394A26916B85FB700192439 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A26816B85FB700192439 /* libLeap.dylib */; };
 		13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
+		13F4E47E16C06BB3008A816C /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F4E47D16C06BB3008A816C /* hand.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1394A1FF16B72AD000192439 /* MacGestureControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacGestureControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394A1FF16B72AD000192439 /* OSXGestureControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSXGestureControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1394A20316B72AD000192439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1394A20616B72AD000192439 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1394A20716B72AD000192439 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1394A20816B72AD000192439 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1394A20B16B72AD000192439 /* MacGestureControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacGestureControl-Info.plist"; sourceTree = "<group>"; };
+		1394A20B16B72AD000192439 /* OSXGestureControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSXGestureControl-Info.plist"; sourceTree = "<group>"; };
 		1394A20D16B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1394A20F16B72AD000192439 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1394A21116B72AD000192439 /* MacGestureControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacGestureControl-Prefix.pch"; sourceTree = "<group>"; };
+		1394A21116B72AD000192439 /* OSXGestureControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSXGestureControl-Prefix.pch"; sourceTree = "<group>"; };
 		1394A21316B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1394A21516B72AD000192439 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1394A21616B72AD000192439 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1394A21516B72AD000192439 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GestureController/AppDelegate.h; sourceTree = "<group>"; };
+		1394A21616B72AD000192439 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GestureController/AppDelegate.m; sourceTree = "<group>"; };
 		1394A21916B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1394A22116B72AD000192439 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1394A22816B72AD000192439 /* LEAPTest3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LEAPTest3Tests-Info.plist"; sourceTree = "<group>"; };
-		1394A22A16B72AD000192439 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1394A22C16B72AD000192439 /* LEAPTest3Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEAPTest3Tests.h; sourceTree = "<group>"; };
-		1394A22D16B72AD000192439 /* LEAPTest3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEAPTest3Tests.m; sourceTree = "<group>"; };
-		1394A23716B72AE300192439 /* GestureListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureListener.h; sourceTree = "<group>"; };
-		1394A23816B72AE300192439 /* GestureListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureListener.m; sourceTree = "<group>"; };
+		1394A23716B72AE300192439 /* GestureListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureListener.h; path = GestureController/GestureListener.h; sourceTree = "<group>"; };
+		1394A23816B72AE300192439 /* GestureListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureListener.m; path = GestureController/GestureListener.m; sourceTree = "<group>"; };
 		1394A25E16B84EA600192439 /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leap.h; sourceTree = "<group>"; };
 		1394A26016B84EA600192439 /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
 		1394A26116B84EA600192439 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapObjectiveC.h; sourceTree = "<group>"; };
 		1394A26216B84EA600192439 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
-		1394A26516B8577F00192439 /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
-		1394A26616B8577F00192439 /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
+		1394A26516B8577F00192439 /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gesture.h; path = GestureController/Gesture.h; sourceTree = "<group>"; };
+		1394A26616B8577F00192439 /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gesture.m; path = GestureController/Gesture.m; sourceTree = "<group>"; };
 		1394A26816B85FB700192439 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 		13F4E47416B9B99D008A816C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		13F4E47D16C06BB3008A816C /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand.png; path = GestureController/hand.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +66,17 @@
 		1394A1F416B72AD000192439 = {
 			isa = PBXGroup;
 			children = (
+				1394A25D16B84EA600192439 /* include */,
+				1394A21516B72AD000192439 /* AppDelegate.h */,
+				1394A21616B72AD000192439 /* AppDelegate.m */,
+				1394A21816B72AD000192439 /* MainMenu.xib */,
+				1394A26516B8577F00192439 /* Gesture.h */,
+				1394A26616B8577F00192439 /* Gesture.m */,
+				1394A23716B72AE300192439 /* GestureListener.h */,
+				1394A23816B72AE300192439 /* GestureListener.m */,
+				13F4E47D16C06BB3008A816C /* hand.png */,
+				1394A20A16B72AD000192439 /* Supporting Files */,
 				13F4E47416B9B99D008A816C /* EventKit.framework */,
-				1394A20916B72AD000192439 /* MacGestureControl */,
-				1394A22616B72AD000192439 /* LEAPTest3Tests */,
 				1394A20216B72AD000192439 /* Frameworks */,
 				1394A20016B72AD000192439 /* Products */,
 			);
@@ -79,7 +85,7 @@
 		1394A20016B72AD000192439 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1394A1FF16B72AD000192439 /* MacGestureControl.app */,
+				1394A1FF16B72AD000192439 /* OSXGestureControl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,52 +111,17 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		1394A20916B72AD000192439 /* MacGestureControl */ = {
-			isa = PBXGroup;
-			children = (
-				1394A20A16B72AD000192439 /* Supporting Files */,
-				1394A25D16B84EA600192439 /* include */,
-				1394A21516B72AD000192439 /* AppDelegate.h */,
-				1394A21616B72AD000192439 /* AppDelegate.m */,
-				1394A21816B72AD000192439 /* MainMenu.xib */,
-				1394A26516B8577F00192439 /* Gesture.h */,
-				1394A26616B8577F00192439 /* Gesture.m */,
-				1394A23716B72AE300192439 /* GestureListener.h */,
-				1394A23816B72AE300192439 /* GestureListener.m */,
-			);
-			name = MacGestureControl;
-			path = LEAPTest3;
-			sourceTree = "<group>";
-		};
 		1394A20A16B72AD000192439 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1394A20B16B72AD000192439 /* MacGestureControl-Info.plist */,
+				1394A20B16B72AD000192439 /* OSXGestureControl-Info.plist */,
 				1394A20C16B72AD000192439 /* InfoPlist.strings */,
 				1394A20F16B72AD000192439 /* main.m */,
-				1394A21116B72AD000192439 /* MacGestureControl-Prefix.pch */,
+				1394A21116B72AD000192439 /* OSXGestureControl-Prefix.pch */,
 				1394A21216B72AD000192439 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1394A22616B72AD000192439 /* LEAPTest3Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1394A22C16B72AD000192439 /* LEAPTest3Tests.h */,
-				1394A22D16B72AD000192439 /* LEAPTest3Tests.m */,
-				1394A22716B72AD000192439 /* Supporting Files */,
-			);
-			path = LEAPTest3Tests;
-			sourceTree = "<group>";
-		};
-		1394A22716B72AD000192439 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1394A22816B72AD000192439 /* LEAPTest3Tests-Info.plist */,
-				1394A22916B72AD000192439 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = GestureController;
 			sourceTree = "<group>";
 		};
 		1394A25D16B84EA600192439 /* include */ = {
@@ -161,15 +132,16 @@
 				1394A26116B84EA600192439 /* LeapObjectiveC.h */,
 				1394A26216B84EA600192439 /* LeapObjectiveC.mm */,
 			);
-			path = include;
+			name = include;
+			path = GestureController/include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1394A1FE16B72AD000192439 /* MacGestureControl */ = {
+		1394A1FE16B72AD000192439 /* OSXGestureControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "MacGestureControl" */;
+			buildConfigurationList = 1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "OSXGestureControl" */;
 			buildPhases = (
 				1394A1FB16B72AD000192439 /* Sources */,
 				1394A1FC16B72AD000192439 /* Frameworks */,
@@ -179,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = MacGestureControl;
-			productName = LEAPTest3;
-			productReference = 1394A1FF16B72AD000192439 /* MacGestureControl.app */;
+			name = OSXGestureControl;
+			productName = GestureController;
+			productReference = 1394A1FF16B72AD000192439 /* OSXGestureControl.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +165,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Chris Willingham";
 			};
-			buildConfigurationList = 1394A1F916B72AD000192439 /* Build configuration list for PBXProject "MacGestureControl" */;
+			buildConfigurationList = 1394A1F916B72AD000192439 /* Build configuration list for PBXProject "OSXGestureControl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -205,7 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1394A1FE16B72AD000192439 /* MacGestureControl */,
+				1394A1FE16B72AD000192439 /* OSXGestureControl */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +190,7 @@
 				1394A20E16B72AD000192439 /* InfoPlist.strings in Resources */,
 				1394A21416B72AD000192439 /* Credits.rtf in Resources */,
 				1394A21A16B72AD000192439 /* MainMenu.xib in Resources */,
+				13F4E47E16C06BB3008A816C /* hand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +234,7 @@
 				1394A21916B72AD000192439 /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		1394A22916B72AD000192439 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1394A22A16B72AD000192439 /* en */,
-			);
-			name = InfoPlist.strings;
+			path = GestureController;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -334,8 +300,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/MacGestureControl-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3/MacGestureControl-Info.plist";
+				GCC_PREFIX_HEADER = "GestureController/OSXGestureControl-Prefix.pch";
+				INFOPLIST_FILE = "GestureController/OSXGestureControl-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
@@ -343,7 +309,7 @@
 					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = MacGestureControl;
+				PRODUCT_NAME = OSXGestureControl;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -355,8 +321,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LEAPTest3/MacGestureControl-Prefix.pch";
-				INFOPLIST_FILE = "LEAPTest3/MacGestureControl-Info.plist";
+				GCC_PREFIX_HEADER = "GestureController/OSXGestureControl-Prefix.pch";
+				INFOPLIST_FILE = "GestureController/OSXGestureControl-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
@@ -364,7 +330,7 @@
 					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = MacGestureControl;
+				PRODUCT_NAME = OSXGestureControl;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -372,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1394A1F916B72AD000192439 /* Build configuration list for PBXProject "MacGestureControl" */ = {
+		1394A1F916B72AD000192439 /* Build configuration list for PBXProject "OSXGestureControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1394A22F16B72AD000192439 /* Debug */,
@@ -381,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "MacGestureControl" */ = {
+		1394A23116B72AD000192439 /* Build configuration list for PBXNativeTarget "OSXGestureControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1394A23216B72AD000192439 /* Debug */,

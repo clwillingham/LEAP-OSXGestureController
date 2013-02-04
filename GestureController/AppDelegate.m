@@ -51,12 +51,31 @@
     [listener run];
 }
 
+-(void)awakeFromNib{
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [statusItem setMenu:[self statusMenu]];
+    //[statusItem setTitle:@"Test"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSImage *img = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"hand" ofType:@"png"]];
+    [img setSize:NSMakeSize(20, 20)];
+    [statusItem setImage:img];
+    [statusItem setHighlightMode:YES];
+    [window close];
+}
+
 -(void) pressKey:(int)key down:(BOOL)pressDown{
     CGEventRef downEvent = CGEventCreateKeyboardEvent(NULL, key, pressDown);
     
     CGEventPost(kCGHIDEventTap, downEvent);
     
     CFRelease(downEvent);
+}
+
+- (IBAction)onQuitClick:(id)sender {
+    [[NSApplication sharedApplication] terminate:nil];
+}
+
+- (IBAction)onAboutClick:(id)sender {
 }
 
 @end
