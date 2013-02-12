@@ -16,9 +16,11 @@
 		1394A25516B732F800192439 /* GestureListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A23816B72AE300192439 /* GestureListener.m */; };
 		1394A26416B84EA600192439 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26216B84EA600192439 /* LeapObjectiveC.mm */; };
 		1394A26716B8577F00192439 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26616B8577F00192439 /* Gesture.m */; };
-		1394A26916B85FB700192439 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A26816B85FB700192439 /* libLeap.dylib */; };
 		13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
 		13F4E47E16C06BB3008A816C /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F4E47D16C06BB3008A816C /* hand.png */; };
+		4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863616CA52F000ABBD49 /* libLeap.dylib */; };
+		4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
+		4E85863A16CA52FF00ABBD49 /* libLeap.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +46,10 @@
 		1394A26216B84EA600192439 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
 		1394A26516B8577F00192439 /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gesture.h; path = GestureController/Gesture.h; sourceTree = "<group>"; };
 		1394A26616B8577F00192439 /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gesture.m; path = GestureController/Gesture.m; sourceTree = "<group>"; };
-		1394A26816B85FB700192439 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 		13F4E47416B9B99D008A816C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		13F4E47D16C06BB3008A816C /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hand.png; path = GestureController/hand.png; sourceTree = "<group>"; };
+		4E85863616CA52F000ABBD49 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		4E85863716CA52F000ABBD49 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,8 @@
 			files = (
 				13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */,
 				1394A20416B72AD000192439 /* Cocoa.framework in Frameworks */,
-				1394A26916B85FB700192439 /* libLeap.dylib in Frameworks */,
+				4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
+				4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +97,7 @@
 		1394A20216B72AD000192439 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1394A26816B85FB700192439 /* libLeap.dylib */,
+				4E85863316CA52F000ABBD49 /* lib */,
 				1394A20316B72AD000192439 /* Cocoa.framework */,
 				1394A22116B72AD000192439 /* SenTestingKit.framework */,
 				1394A20516B72AD000192439 /* Other Frameworks */,
@@ -136,6 +140,31 @@
 			path = GestureController/include;
 			sourceTree = "<group>";
 		};
+		4E85863316CA52F000ABBD49 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4E85863416CA52F000ABBD49 /* leap */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4E85863416CA52F000ABBD49 /* leap */ = {
+			isa = PBXGroup;
+			children = (
+				4E85863516CA52F000ABBD49 /* libc++ */,
+				4E85863716CA52F000ABBD49 /* libLeap.dylib */,
+			);
+			path = leap;
+			sourceTree = "<group>";
+		};
+		4E85863516CA52F000ABBD49 /* libc++ */ = {
+			isa = PBXGroup;
+			children = (
+				4E85863616CA52F000ABBD49 /* libLeap.dylib */,
+			);
+			path = "libc++";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +175,7 @@
 				1394A1FB16B72AD000192439 /* Sources */,
 				1394A1FC16B72AD000192439 /* Frameworks */,
 				1394A1FD16B72AD000192439 /* Resources */,
+				4E85863B16CA530300ABBD49 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -187,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E85863A16CA52FF00ABBD49 /* libLeap.dylib in Resources */,
 				1394A20E16B72AD000192439 /* InfoPlist.strings in Resources */,
 				1394A21416B72AD000192439 /* Credits.rtf in Resources */,
 				1394A21A16B72AD000192439 /* MainMenu.xib in Resources */,
@@ -195,6 +226,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E85863B16CA530300ABBD49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change @loader_path/libLeap.dylib @executable_path/../Resources/libLeap.dylib ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1394A1FB16B72AD000192439 /* Sources */ = {
@@ -304,9 +351,9 @@
 				INFOPLIST_FILE = "GestureController/OSXGestureControl-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
+					"$(SRCROOT)/lib/leap",
+					"$(SRCROOT)/lib/leap/libc++",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = OSXGestureControl;
@@ -325,9 +372,9 @@
 				INFOPLIST_FILE = "GestureController/OSXGestureControl-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../../LEAP/Leap_SDK/lib/libc++\"",
+					"$(SRCROOT)/lib/leap",
+					"$(SRCROOT)/lib/leap/libc++",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = OSXGestureControl;
