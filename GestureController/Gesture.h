@@ -13,7 +13,8 @@ typedef enum {
     Up,
     Down,
     Left,
-    Right
+    Right,
+    Fist
 } Direction;
 
 @interface Gesture : NSObject

@@ -16,11 +16,11 @@
 		1394A25516B732F800192439 /* GestureListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A23816B72AE300192439 /* GestureListener.m */; };
 		1394A26416B84EA600192439 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26216B84EA600192439 /* LeapObjectiveC.mm */; };
 		1394A26716B8577F00192439 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26616B8577F00192439 /* Gesture.m */; };
-		13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
 		13F4E47E16C06BB3008A816C /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F4E47D16C06BB3008A816C /* hand.png */; };
 		4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863616CA52F000ABBD49 /* libLeap.dylib */; };
 		4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
 		4E85863A16CA52FF00ABBD49 /* libLeap.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
+		F0DB778216E262CE00B4CE35 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */,
+				F0DB778216E262CE00B4CE35 /* EventKit.framework in Frameworks */,
 				1394A20416B72AD000192439 /* Cocoa.framework in Frameworks */,
 				4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
 				4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
@@ -355,7 +355,7 @@
 					"$(SRCROOT)/lib/leap",
 					"$(SRCROOT)/lib/leap/libc++",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = OSXGestureControl;
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,7 +376,7 @@
 					"$(SRCROOT)/lib/leap",
 					"$(SRCROOT)/lib/leap/libc++",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = OSXGestureControl;
 				WRAPPER_EXTENSION = app;
 			};

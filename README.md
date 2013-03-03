@@ -18,7 +18,7 @@ After you have opened the application in xcode and started the app (there might 
 * swipe down: open expose
 * swipe left: switch to space left of current space
 * swipe right: switch to space right of current space
-
+* make a fist: put all displays to sleep
 Also...
 -------
 Please feel free to contribute! i honestly have never made an OSX app before so i'm sure i'm making planty of noob mistakes so if you see anything that can be fixed, go ahead and clone it and fix it, and don't forget to put in a pull request.
