@@ -46,6 +46,7 @@
         prevGesture = nil;
     }
     
+    NSLog([NSString stringWithFormat:@"%d", [[frame hands] count]]);
     if ([[frame hands] count] != 0) {
         // Get the first hand
         LeapHand *hand = [[frame hands] objectAtIndex:0];
@@ -57,6 +58,8 @@
             // Calculate the hand's average finger tip position
             LeapVector *avgPos = [[LeapVector alloc] init];
             LeapVector *avgVelocity = [[LeapVector alloc] init];
+            LeapVector *palmVelocity = [hand palmVelocity];
+
             for (int i = 0; i < [fingers count]; i++) {
                 LeapFinger *finger = [fingers objectAtIndex:i];
                 
@@ -71,18 +74,26 @@
                 if([avgVelocity y] > 700){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Up andFingers:[fingers count]];
                     //NSLog(@"Gesture up with %ld fingers", [fingers count]);
+                    //NSLog(@"Gesture up with %@,%@",palmVelocity,avgVelocity);
                     [self gestureDetected:gesture];
                 }else if([avgVelocity y] < -700){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Down andFingers:[fingers count]];
                     //NSLog(@"Gesture down with %ld fingers", [fingers count]);
+                    //NSLog(@"Gesture down with %@,%@",palmVelocity,avgVelocity);
                     [self gestureDetected:gesture];
                 }else if([avgVelocity x] > 500){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Right andFingers:[fingers count]];
                     //NSLog(@"Gesture right with %ld fingers", [fingers count]);
+                    //NSLog(@"Gesture right with %@,%@",palmVelocity,avgVelocity);
                     [self gestureDetected:gesture];
                 }else if([avgVelocity x] < -500){
                     Gesture *gesture = [[Gesture alloc] initWithDirection:Left andFingers:[fingers count]];
                     //NSLog(@"Gesture left with %ld fingers", [fingers count]);
+                    //NSLog(@"Gesture left with %@,%@",palmVelocity,avgVelocity);
+                    [self gestureDetected:gesture];
+                }else if([palmVelocity z]<-500){
+                    //NSLog(@"Gesture fist with %@,%@",palmVelocity,avgVelocity);
+                    Gesture *gesture = [[Gesture alloc] initWithDirection:Fist andFingers:[fingers count]];
                     [self gestureDetected:gesture];
                 }
             }

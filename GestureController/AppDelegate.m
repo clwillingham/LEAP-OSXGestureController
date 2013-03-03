@@ -44,6 +44,9 @@
                 [self pressKey:kVK_Control down:false];
                 [self pressKey:kVK_RightArrow down:false];
                 break;
+            case Fist:
+                NSLog(@"Gesturing with Fist");
+                [[NSWorkspace sharedWorkspace] launchApplication:@"/System/Library/Frameworks/Screensaver.framework/Versions/A/Resources/ScreenSaverEngine.app"];
             default:
                 break;
         }

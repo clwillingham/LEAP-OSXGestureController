@@ -18,6 +18,7 @@ After you have opened the application in xcode and started the app (there might 
 * swipe down: open expose
 * swipe left: switch to space left of current space
 * swipe right: switch to space right of current space
+* make a fist: put all displays to sleep
 
 Also...
 -------
