@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132C1CF616F7C6F600C69750 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 132C1CF516F7C6F600C69750 /* Sample.m */; };
+		132C1CF816F7C7FC00C69750 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863616CA52F000ABBD49 /* libLeap.dylib */; };
 		1394A20416B72AD000192439 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394A20316B72AD000192439 /* Cocoa.framework */; };
 		1394A20E16B72AD000192439 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1394A20C16B72AD000192439 /* InfoPlist.strings */; };
 		1394A21016B72AD000192439 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A20F16B72AD000192439 /* main.m */; };
@@ -18,12 +20,12 @@
 		1394A26716B8577F00192439 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394A26616B8577F00192439 /* Gesture.m */; };
 		13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4E47416B9B99D008A816C /* EventKit.framework */; };
 		13F4E47E16C06BB3008A816C /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F4E47D16C06BB3008A816C /* hand.png */; };
-		4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863616CA52F000ABBD49 /* libLeap.dylib */; };
-		4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
 		4E85863A16CA52FF00ABBD49 /* libLeap.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 4E85863716CA52F000ABBD49 /* libLeap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		132C1CF416F7C6F600C69750 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
+		132C1CF516F7C6F600C69750 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
 		1394A1FF16B72AD000192439 /* OSXGestureControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSXGestureControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1394A20316B72AD000192439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1394A20616B72AD000192439 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -59,8 +61,7 @@
 			files = (
 				13F4E47516B9B99D008A816C /* EventKit.framework in Frameworks */,
 				1394A20416B72AD000192439 /* Cocoa.framework in Frameworks */,
-				4E85863916CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
-				4E85863816CA52F000ABBD49 /* libLeap.dylib in Frameworks */,
+				132C1CF816F7C7FC00C69750 /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +71,8 @@
 		1394A1F416B72AD000192439 = {
 			isa = PBXGroup;
 			children = (
+				132C1CF416F7C6F600C69750 /* Sample.h */,
+				132C1CF516F7C6F600C69750 /* Sample.m */,
 				1394A25D16B84EA600192439 /* include */,
 				1394A21516B72AD000192439 /* AppDelegate.h */,
 				1394A21616B72AD000192439 /* AppDelegate.m */,
@@ -253,6 +256,7 @@
 				1394A21716B72AD000192439 /* AppDelegate.m in Sources */,
 				1394A26416B84EA600192439 /* LeapObjectiveC.mm in Sources */,
 				1394A26716B8577F00192439 /* Gesture.m in Sources */,
+				132C1CF616F7C6F600C69750 /* Sample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

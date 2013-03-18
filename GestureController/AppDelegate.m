@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GestureListener.h"
 #import "Gesture.h"
+#import "Sample.h"
 #import <Carbon/Carbon.h>
 
 @implementation AppDelegate

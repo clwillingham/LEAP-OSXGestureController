@@ -12,11 +12,8 @@
 
 typedef void (^OnGestureEvent) (Gesture *g);
 
-@interface GestureListener : NSObject<LeapDelegate>{
-    LeapController *controller;
-    Gesture *prevGesture;
-    OnGestureEvent onGesture;
-    int gestureTimeout;
+@interface GestureListener : NSObject<LeapListener>{
+
 }
 
 - (void) run;
@@ -24,5 +21,7 @@ typedef void (^OnGestureEvent) (Gesture *g);
 - (void) setGestureEvent:(OnGestureEvent)callback;
 
 - (void) gestureDetected:(Gesture*)gesture;
+
+- (void) handleSwipe: (LeapSwipeGesture*)swipe;
 
 @end

@@ -7,9 +7,9 @@
 ################################################################################
 
 # usage:
-#   swig -c++ -python -o Leap_wrap_python.cpp -interface _LeapPython Leap.i
-#   swig -c++ -java   -o Leap_wrap_java.cpp -package com.leapmotion.leap -outdir com/leapmotion/leap Leap.i
-#   swig -c++ -csharp -o Leap_wrap_csharp.cpp -dllimport _LeapCSharp -namespace Leap Leap.i
+#   swig -c++ -python -o LeapPython.cpp -interface LeapPython Leap.i
+#   swig -c++ -java   -o LeapJava.cpp -package com.leapmotion.leap -outdir com/leapmotion/leap Leap.i
+#   swig -c++ -csharp -o LeapCSharp.cpp -dllimport LeapCSharp -namespace Leap Leap.i
 
 %module(directors="1", threads="1") Leap
 #pragma SWIG nowarn=325
@@ -71,13 +71,17 @@
 # Apply language specific caseing
 #if SWIGCSHARP
 
+%rename(GestureType) Leap::Gesture::Type;
+%rename(GestureState) Leap::Gesture::State;
 %rename("%(camelcase)s") "";
 
 #elif SWIGPYTHON
 
 %typemap(varout, noblock=1) SWIGTYPE & {
-    %set_varoutput(SWIG_NewPointerObj(%as_voidptr(&$1()), $descriptor, %newpointer_flags));
+  %set_varoutput(SWIG_NewPointerObj(%as_voidptr(&$1()), $descriptor, %newpointer_flags));
 }
+%rename(GestureType) Leap::Gesture::Type;
+%rename(GestureState) Leap::Gesture::State;
 %rename("%(undercase)s", notregexmatch$name="^[A-Z0-9_]+$") "";
 
 #endif
@@ -89,7 +93,7 @@
 %leapattrib( Leap::Pointable, Vector, tipPosition );
 %leapattrib( Leap::Pointable, Vector, tipVelocity );
 %leapattrib( Leap::Pointable, Vector, direction );
-%constattrib( Leap::Pointable, float, width);
+%constattrib( Leap::Pointable, float, width );
 %constattrib( Leap::Pointable, float, length );
 %constattrib( Leap::Pointable, bool, isTool );
 %constattrib( Leap::Pointable, bool, isFinger );
@@ -109,16 +113,47 @@
 %constattrib( Leap::Hand, float, sphereRadius );
 %leapattrib( Leap::Hand, Frame, frame );
 
+%constattrib( Leap::Gesture, Leap::Gesture::Type, type )
+%constattrib( Leap::Gesture, Leap::Gesture::State, state )
+%constattrib( Leap::Gesture, int32_t, id );
+%constattrib( Leap::Gesture, int64_t, duration );
+%constattrib( Leap::Gesture, float, durationSeconds );
+%leapattrib( Leap::Gesture, Frame, frame );
+%leapattrib( Leap::Gesture, HandList, hands );
+%leapattrib( Leap::Gesture, PointableList, pointables );
+%constattrib( Leap::Gesture, bool, isValid );
+%leapattrib( Leap::CircleGesture, Vector, center );
+%leapattrib( Leap::CircleGesture, Vector, normal );
+%constattrib( Leap::CircleGesture, float, progress );
+%constattrib( Leap::CircleGesture, float, radius );
+%leapattrib( Leap::CircleGesture, Pointable, pointable );
+%leapattrib( Leap::SwipeGesture, Vector, startPosition );
+%leapattrib( Leap::SwipeGesture, Vector, position );
+%leapattrib( Leap::SwipeGesture, Vector, direction );
+%constattrib( Leap::SwipeGesture, float, speed );
+%leapattrib( Leap::SwipeGesture, Pointable, pointable );
+%leapattrib( Leap::ScreenTapGesture, Vector, position );
+%leapattrib( Leap::ScreenTapGesture, Vector, direction );
+%constattrib( Leap::ScreenTapGesture, float, progress );
+%leapattrib( Leap::ScreenTapGesture, Pointable, pointable );
+%leapattrib( Leap::KeyTapGesture, Vector, position );
+%leapattrib( Leap::KeyTapGesture, Vector, direction );
+%constattrib( Leap::KeyTapGesture, float, progress );
+%leapattrib( Leap::KeyTapGesture, Pointable, pointable );
+
+
 #if SWIGCSHARP
 %constattrib( Leap::PointableList, int, count );
 %constattrib( Leap::FingerList, int, count );
 %constattrib( Leap::ToolList, int, count );
+%constattrib( Leap::GestureList, int, count );
 %constattrib( Leap::HandList, int, count );
 %constattrib( Leap::ScreenList, int, count );
 #endif
 %constattrib( Leap::PointableList, bool, empty );
 %constattrib( Leap::FingerList, bool, empty );
 %constattrib( Leap::ToolList, bool, empty );
+%constattrib( Leap::GestureList, bool, empty );
 %constattrib( Leap::HandList, bool, empty );
 %constattrib( Leap::ScreenList, bool, empty );
 
@@ -145,6 +180,7 @@
 %staticattrib( Leap::Pointable, static const Pointable&, invalid);
 %staticattrib( Leap::Finger, static const Finger&, invalid);
 %staticattrib( Leap::Tool, static const Tool&, invalid);
+%staticattrib( Leap::Gesture, static const Gesture&, invalid);
 %staticattrib( Leap::Hand, static const Hand&, invalid);
 %staticattrib( Leap::Frame, static const Frame&, invalid);
 %staticattrib( Leap::Screen, static const Screen&, invalid );
@@ -192,6 +228,10 @@
 %ignore Leap::DEG_TO_RAD;
 %ignore Leap::RAD_TO_DEG;
 %ignore Leap::PI;
+
+# Use proper Java enums
+%include "enums.swg"
+%javaconst(1);
 
 #endif
 
@@ -287,7 +327,7 @@ extern "C" BOOL WINAPI DllMain(
 %pragma(java) jniclasscode=%{
   static {
     try {
-      System.loadLibrary("_LeapJava");
+      System.loadLibrary("LeapJava");
     } catch (UnsatisfiedLinkError e) {
       System.err.println("Native code library failed to load. \n" + e);
       System.exit(1);
@@ -588,6 +628,7 @@ extern "C" BOOL WINAPI DllMain(
 %leap_list_helper(Pointable);
 %leap_list_helper(Finger);
 %leap_list_helper(Tool);
+%leap_list_helper(Gesture);
 %leap_list_helper(Hand);
 %leap_list_helper(Screen);
 
@@ -600,41 +641,41 @@ extern "C" BOOL WINAPI DllMain(
 %extend Leap::Config {
 %pythoncode {
   def get(self, *args):
-    type = _LeapPython.Config_type(self, *args)
-    if _LeapPython.Config_is_array(self, *args):
-      if type == _LeapPython.Config_TYPE_BOOLEAN:
-        return _LeapPython.Config_get_bool_array(self, *args)
-      elif type == _LeapPython.Config_TYPE_INT32:
-        return _LeapPython.Config_get_int_32array(self, *args)
-      elif type == _LeapPython.Config_TYPE_INT64:
-        return _LeapPython.Config_get_int_32array(self, *args)
-      elif type == _LeapPython.Config_TYPE_UINT32:
-        return _LeapPython.Config_get_uint_32array(self, *args)
-      elif type == _LeapPython.Config_TYPE_UINT64:
-        return _LeapPython.Config_get_uint_32array(self, *args)
-      elif type == _LeapPython.Config_TYPE_FLOAT:
-        return _LeapPython.Config_get_float_array(self, *args)
-      elif type == _LeapPython.Config_TYPE_DOUBLE:
-        return _LeapPython.Config_get_double_array(self, *args)
-      elif type == _LeapPython.Config_TYPE_STRING:
-        return _LeapPython.Config_get_string_array(self, *args)
+    type = LeapPython.Config_type(self, *args)
+    if LeapPython.Config_is_array(self, *args):
+      if type == LeapPython.Config_TYPE_BOOLEAN:
+        return LeapPython.Config_get_bool_array(self, *args)
+      elif type == LeapPython.Config_TYPE_INT32:
+        return LeapPython.Config_get_int_32array(self, *args)
+      elif type == LeapPython.Config_TYPE_INT64:
+        return LeapPython.Config_get_int_32array(self, *args)
+      elif type == LeapPython.Config_TYPE_UINT32:
+        return LeapPython.Config_get_uint_32array(self, *args)
+      elif type == LeapPython.Config_TYPE_UINT64:
+        return LeapPython.Config_get_uint_32array(self, *args)
+      elif type == LeapPython.Config_TYPE_FLOAT:
+        return LeapPython.Config_get_float_array(self, *args)
+      elif type == LeapPython.Config_TYPE_DOUBLE:
+        return LeapPython.Config_get_double_array(self, *args)
+      elif type == LeapPython.Config_TYPE_STRING:
+        return LeapPython.Config_get_string_array(self, *args)
     else:
-      if type == _LeapPython.Config_TYPE_BOOLEAN:
-        return _LeapPython.Config_get_bool(self, *args)
-      elif type == _LeapPython.Config_TYPE_INT32:
-        return _LeapPython.Config_get_int_32(self, *args)
-      elif type == _LeapPython.Config_TYPE_INT64:
-        return _LeapPython.Config_get_int_64(self, *args)
-      elif type == _LeapPython.Config_TYPE_UINT32:
-        return _LeapPython.Config_get_uint_32(self, *args)
-      elif type == _LeapPython.Config_TYPE_UINT64:
-        return _LeapPython.Config_get_uint_64(self, *args)
-      elif type == _LeapPython.Config_TYPE_FLOAT:
-        return _LeapPython.Config_get_float(self, *args)
-      elif type == _LeapPython.Config_TYPE_DOUBLE:
-        return _LeapPython.Config_get_double(self, *args)
-      elif type == _LeapPython.Config_TYPE_STRING:
-        return _LeapPython.Config_get_string(self, *args)
+      if type == LeapPython.Config_TYPE_BOOLEAN:
+        return LeapPython.Config_get_bool(self, *args)
+      elif type == LeapPython.Config_TYPE_INT32:
+        return LeapPython.Config_get_int_32(self, *args)
+      elif type == LeapPython.Config_TYPE_INT64:
+        return LeapPython.Config_get_int_64(self, *args)
+      elif type == LeapPython.Config_TYPE_UINT32:
+        return LeapPython.Config_get_uint_32(self, *args)
+      elif type == LeapPython.Config_TYPE_UINT64:
+        return LeapPython.Config_get_uint_64(self, *args)
+      elif type == LeapPython.Config_TYPE_FLOAT:
+        return LeapPython.Config_get_float(self, *args)
+      elif type == LeapPython.Config_TYPE_DOUBLE:
+        return LeapPython.Config_get_double(self, *args)
+      elif type == LeapPython.Config_TYPE_STRING:
+        return LeapPython.Config_get_string(self, *args)
     return None
 %}}
 %feature("shadow") Leap::Config::type(const std::string& key) const %{%}
