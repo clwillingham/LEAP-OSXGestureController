@@ -68,7 +68,7 @@
     
     if(gestureTimeout > 0 && prevGesture != nil){
         gestureTimeout--;
-        NSLog(@"timeout %d", gestureTimeout);
+//        NSLog(@"timeout %d", gestureTimeout);
     }else{
         gestureTimeout = 0;
     
