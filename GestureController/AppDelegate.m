@@ -20,6 +20,13 @@
     GestureListener *listener = [[GestureListener alloc] init];
     
     [listener setGestureEvent:^(Gesture *g) {
+        
+//        if(g.type == SCROLL_GESTURE){
+//            //sNSLog(@"avgVelocity: %@", [g avgVelocity]);
+//            [self scrollX:g.avgVelocity.x/10 scrollY:g.avgVelocity.y/10];
+//            return;
+//        }
+        
         switch ([g direction]) {
             case Up:
                 NSLog(@"Gesturing Up");
@@ -48,6 +55,7 @@
             default:
                 break;
         }
+        
     }];
     [listener run];
 }
@@ -62,6 +70,20 @@
     [statusItem setImage:img];
     [statusItem setHighlightMode:YES];
     [window close];
+}
+
+-(void) scrollX:(NSInteger)x scrollY:(NSInteger)y{
+    CGWheelCount wheelCount = 2; // 1 for Y-only, 2 for Y-X, 3 for Y-X-Z
+    int32_t xScroll = x; // Negative for right
+    int32_t yScroll = y; // Negative for down
+    //NSLog(@"Scroll X: %ld, Y: %ld", (long)x, (long)y);
+    CGEventRef cgEvent = CGEventCreateScrollWheelEvent(NULL, kCGScrollEventUnitPixel, wheelCount, yScroll, xScroll);
+    
+    // You can post the CGEvent to the event stream to have it automatically sent to the window under the cursor
+    CGEventPost(kCGHIDEventTap, cgEvent);
+    
+//    NSEvent *theEvent = [NSEvent eventWithCGEvent:cgEvent];
+    CFRelease(cgEvent);
 }
 
 -(void) pressKey:(int)key down:(BOOL)pressDown{

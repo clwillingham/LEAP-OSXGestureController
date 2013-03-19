@@ -16,6 +16,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 -(void) pressKey:(int)key down:(BOOL)pressDown;
+-(void) scrollX:(NSInteger)x scrollY:(NSInteger)y;
 - (IBAction)onQuitClick:(id)sender;
 - (IBAction)onAboutClick:(id)sender;
 
