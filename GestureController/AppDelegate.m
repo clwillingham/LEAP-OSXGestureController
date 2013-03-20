@@ -41,15 +41,25 @@
             case Left:
                 NSLog(@"Gesturing Left with %ld fingers", [g fingers]);
                 [self pressKey:kVK_Control down:true];
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
                 [self pressKey:kVK_LeftArrow down:true];
+                
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
+                
                 [self pressKey:kVK_Control down:false];
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
                 [self pressKey:kVK_LeftArrow down:false];
                 break;
             case Right:
                 NSLog(@"Gesturing Right");
                 [self pressKey:kVK_Control down:true];
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
                 [self pressKey:kVK_RightArrow down:true];
+                
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
+                
                 [self pressKey:kVK_Control down:false];
+                [NSThread sleepForTimeInterval: 0.1]; // 100 mS delay
                 [self pressKey:kVK_RightArrow down:false];
                 break;
             default:
